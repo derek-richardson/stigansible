@@ -462,15 +462,6 @@
     create: yes
   when:
     - rhel8STIG_stigrule_230354_Manage
-# R-230378 RHEL-08-020310
-- name: stigrule_230378__etc_login_defs
-  lineinfile:
-    path: /etc/login.defs
-    regexp: '^FAIL_DELAY'
-    line: "{{ rhel8STIG_stigrule_230378__etc_login_defs_Line }}"
-    create: yes
-  when:
-    - rhel8STIG_stigrule_230378_Manage
 # R-230382 RHEL-08-020350
 - name: stigrule_230382_PrintLastLog
   lineinfile:
