@@ -1194,30 +1194,6 @@
     name: openssh-server.x86_64
     state: "{{ rhel8STIG_stigrule_230526_ensure_openssh_server_x86_64_is_installed_State }}"
   when: rhel8STIG_stigrule_230526_Manage
-# R-230526 RHEL-08-040160
-- name: check if sshd.service is installed
-  shell: ! systemctl list-unit-files | grep "^sshd.service[ \t]\+"
-  changed_when: False
-  check_mode: no
-  register: result
-  failed_when: result.rc > 1
-- name: stigrule_230526_sshd_enable
-  service:
-    name: sshd.service
-    enabled: "{{ rhel8STIG_stigrule_230526_sshd_enable_Enabled }}"
-  when:
-    - rhel8STIG_stigrule_230526_Manage
-    - result.rc == 0
-# R-230527 RHEL-08-040161
-- name: stigrule_230527_RekeyLimit
-  lineinfile:
-    path: /etc/ssh/sshd_config
-    regexp: '^\s*(?i)RekeyLimit\s+'
-    line: "{{ rhel8STIG_stigrule_230527_RekeyLimit_Line }}"
-  notify: ssh_restart
-  when:
-    - rhel8STIG_stigrule_230527_Manage
-    - "'openssh-server' in packages"
 # R-230529 RHEL-08-040170
 - name: stigrule_230529_systemctl_mask_ctrl_alt_del_target
   systemd:
@@ -1495,32 +1471,12 @@
     no_extra_spaces: yes
   when:
     - rhel8STIG_stigrule_244523_Manage
-# R-244525 RHEL-08-010201
-- name: stigrule_244525_ClientAliveInterval
-  lineinfile:
-    path: /etc/ssh/sshd_config
-    regexp: '^\s*(?i)ClientAliveInterval\s+'
-    line: "{{ rhel8STIG_stigrule_244525_ClientAliveInterval_Line }}"
-  notify: ssh_restart
-  when:
-    - rhel8STIG_stigrule_244525_Manage
-    - "'openssh-server' in packages"
 # R-244527 RHEL-08-010472
 - name: stigrule_244527_rng_tools
   yum:
     name: rng-tools
     state: "{{ rhel8STIG_stigrule_244527_rng_tools_State }}"
   when: rhel8STIG_stigrule_244527_Manage
-# R-244528 RHEL-08-010522
-- name: stigrule_244528_GSSAPIAuthentication
-  lineinfile:
-    path: /etc/ssh/sshd_config
-    regexp: '^\s*(?i)GSSAPIAuthentication\s+'
-    line: "{{ rhel8STIG_stigrule_244528_GSSAPIAuthentication_Line }}"
-  notify: ssh_restart
-  when:
-    - rhel8STIG_stigrule_244528_Manage
-    - "'openssh-server' in packages"
 # R-244535 RHEL-08-020031
 - name: stigrule_244535__etc_dconf_db_local_d_00_screensaver
   ini_file:
