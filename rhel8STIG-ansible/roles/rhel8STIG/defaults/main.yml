@@ -130,7 +130,7 @@ rhel8STIG_stigrule_230324__etc_login_defs_Line: 'CREATE_HOME yes'
 rhel8STIG_stigrule_230329_Manage: True
 rhel8STIG_stigrule_230329__etc_gdm_custom_conf_Value: 'false'
 # R-230330 RHEL-08-010830
-rhel8STIG_stigrule_230330_Manage: True
+##rhel8STIG_stigrule_230330_Manage: True
 ##rhel8STIG_stigrule_230330_PermitUserEnvironment_Line: PermitUserEnvironment no
 # R-230346 RHEL-08-020024
 rhel8STIG_stigrule_230346_Manage: True
