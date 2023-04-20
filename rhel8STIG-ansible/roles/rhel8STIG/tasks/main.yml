@@ -462,15 +462,6 @@
     create: yes
   when:
     - rhel8STIG_stigrule_230354_Manage
-# R-230357 RHEL-08-020110
-- name: stigrule_230357__etc_security_pwquality_conf
-  lineinfile:
-    path: /etc/security/pwquality.conf
-    regexp: '^\s*ucredit'
-    line: "{{ rhel8STIG_stigrule_230357__etc_security_pwquality_conf_Line }}"
-    create: yes
-  when:
-    - rhel8STIG_stigrule_230357_Manage
 # R-230358 RHEL-08-020120
 - name: stigrule_230358__etc_security_pwquality_conf
   lineinfile:
