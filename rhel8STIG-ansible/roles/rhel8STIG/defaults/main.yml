@@ -36,7 +36,7 @@ rhel8STIG_stigrule_230239_Manage: True
 rhel8STIG_stigrule_230239_krb5_workstation_State: removed
 # R-230240 RHEL-08-010170
 rhel8STIG_stigrule_230240_Manage: True
-rhel8STIG_stigrule_230240__etc_selinux_config_Line: 'SELINUX=enforcing'
+rhel8STIG_stigrule_230240__etc_selinux_config_Line: 'SELINUX=permissive'
 # R-230241 RHEL-08-010171
 rhel8STIG_stigrule_230241_Manage: True
 rhel8STIG_stigrule_230241_policycoreutils_State: installed
@@ -131,7 +131,7 @@ rhel8STIG_stigrule_230329_Manage: True
 rhel8STIG_stigrule_230329__etc_gdm_custom_conf_Value: 'false'
 # R-230330 RHEL-08-010830
 rhel8STIG_stigrule_230330_Manage: True
-rhel8STIG_stigrule_230330_PermitUserEnvironment_Line: PermitUserEnvironment no
+##rhel8STIG_stigrule_230330_PermitUserEnvironment_Line: PermitUserEnvironment no
 # R-230346 RHEL-08-020024
 rhel8STIG_stigrule_230346_Manage: True
 rhel8STIG_stigrule_230346__etc_security_limits_conf_Line: '* hard maxlogins 10'
@@ -155,47 +155,47 @@ rhel8STIG_stigrule_230353__etc_tmux_conf_Line: 'set -g lock-after-time 900'
 rhel8STIG_stigrule_230354_Manage: True
 rhel8STIG_stigrule_230354__etc_dconf_db_local_d_locks_session_Line: '/org/gnome/desktop/screensaver/lock-delay'
 # R-230357 RHEL-08-020110
-rhel8STIG_stigrule_230357_Manage: True
-rhel8STIG_stigrule_230357__etc_security_pwquality_conf_Line: 'ucredit = -1'
+##rhel8STIG_stigrule_230357_Manage: True
+##rhel8STIG_stigrule_230357__etc_security_pwquality_conf_Line: 'ucredit = -1'
 # R-230358 RHEL-08-020120
-rhel8STIG_stigrule_230358_Manage: True
-rhel8STIG_stigrule_230358__etc_security_pwquality_conf_Line: 'lcredit = -1'
+##rhel8STIG_stigrule_230358_Manage: True
+##rhel8STIG_stigrule_230358__etc_security_pwquality_conf_Line: 'lcredit = -1'
 # R-230359 RHEL-08-020130
-rhel8STIG_stigrule_230359_Manage: True
-rhel8STIG_stigrule_230359__etc_security_pwquality_conf_Line: 'dcredit = -1'
+##rhel8STIG_stigrule_230359_Manage: True
+##rhel8STIG_stigrule_230359__etc_security_pwquality_conf_Line: 'dcredit = -1'
 # R-230360 RHEL-08-020140
-rhel8STIG_stigrule_230360_Manage: True
-rhel8STIG_stigrule_230360__etc_security_pwquality_conf_Line: 'maxclassrepeat = 4'
+##rhel8STIG_stigrule_230360_Manage: True
+##rhel8STIG_stigrule_230360__etc_security_pwquality_conf_Line: 'maxclassrepeat = 4'
 # R-230361 RHEL-08-020150
-rhel8STIG_stigrule_230361_Manage: True
-rhel8STIG_stigrule_230361__etc_security_pwquality_conf_Line: 'maxrepeat = 3'
+##rhel8STIG_stigrule_230361_Manage: True
+##rhel8STIG_stigrule_230361__etc_security_pwquality_conf_Line: 'maxrepeat = 3'
 # R-230362 RHEL-08-020160
-rhel8STIG_stigrule_230362_Manage: True
-rhel8STIG_stigrule_230362__etc_security_pwquality_conf_Line: 'minclass = 4'
+##rhel8STIG_stigrule_230362_Manage: True
+##rhel8STIG_stigrule_230362__etc_security_pwquality_conf_Line: 'minclass = 4'
 # R-230363 RHEL-08-020170
-rhel8STIG_stigrule_230363_Manage: True
-rhel8STIG_stigrule_230363__etc_security_pwquality_conf_Line: 'difok = 8'
+##rhel8STIG_stigrule_230363_Manage: True
+##rhel8STIG_stigrule_230363__etc_security_pwquality_conf_Line: 'difok = 8'
 # R-230365 RHEL-08-020190
-rhel8STIG_stigrule_230365_Manage: True
-rhel8STIG_stigrule_230365__etc_login_defs_Line: 'PASS_MIN_DAYS 1'
+##rhel8STIG_stigrule_230365_Manage: True
+##rhel8STIG_stigrule_230365__etc_login_defs_Line: 'PASS_MIN_DAYS 1'
 # R-230366 RHEL-08-020200
-rhel8STIG_stigrule_230366_Manage: True
-rhel8STIG_stigrule_230366__etc_login_defs_Line: 'PASS_MAX_DAYS 60'
+##rhel8STIG_stigrule_230366_Manage: True
+##rhel8STIG_stigrule_230366__etc_login_defs_Line: 'PASS_MAX_DAYS 60'
 # R-230369 RHEL-08-020230
-rhel8STIG_stigrule_230369_Manage: True
-rhel8STIG_stigrule_230369__etc_security_pwquality_conf_Line: 'minlen = 15'
+##rhel8STIG_stigrule_230369_Manage: True
+##rhel8STIG_stigrule_230369__etc_security_pwquality_conf_Line: 'minlen = 15'
 # R-230370 RHEL-08-020231
-rhel8STIG_stigrule_230370_Manage: True
-rhel8STIG_stigrule_230370__etc_login_defs_Line: 'PASS_MIN_LEN 15'
+##rhel8STIG_stigrule_230370_Manage: True
+##rhel8STIG_stigrule_230370__etc_login_defs_Line: 'PASS_MIN_LEN 15'
 # R-230375 RHEL-08-020280
-rhel8STIG_stigrule_230375_Manage: True
-rhel8STIG_stigrule_230375__etc_security_pwquality_conf_Line: 'ocredit = -1'
+##rhel8STIG_stigrule_230375_Manage: True
+##rhel8STIG_stigrule_230375__etc_security_pwquality_conf_Line: 'ocredit = -1'
 # R-230377 RHEL-08-020300
-rhel8STIG_stigrule_230377_Manage: True
-rhel8STIG_stigrule_230377__etc_security_pwquality_conf_Line: 'dictcheck = 1'
+##rhel8STIG_stigrule_230377_Manage: True
+##rhel8STIG_stigrule_230377__etc_security_pwquality_conf_Line: 'dictcheck = 1'
 # R-230378 RHEL-08-020310
-rhel8STIG_stigrule_230378_Manage: True
-rhel8STIG_stigrule_230378__etc_login_defs_Line: 'FAIL_DELAY 4'
+##rhel8STIG_stigrule_230378_Manage: True
+##rhel8STIG_stigrule_230378__etc_login_defs_Line: 'FAIL_DELAY 4'
 # R-230382 RHEL-08-020350
 rhel8STIG_stigrule_230382_Manage: True
 rhel8STIG_stigrule_230382_PrintLastLog_Line: PrintLastLog yes
@@ -430,12 +430,12 @@ rhel8STIG_stigrule_230505_firewalld_noarch_State: installed
 rhel8STIG_stigrule_230506_Manage: True
 rhel8STIG_stigrule_230506_nmcli_radio_wifi_off_Command: nmcli radio wifi off
 # R-230526 RHEL-08-040160
-rhel8STIG_stigrule_230526_Manage: True
-rhel8STIG_stigrule_230526_ensure_openssh_server_x86_64_is_installed_State: installed
-rhel8STIG_stigrule_230526_sshd_enable_Enabled: yes
+##rhel8STIG_stigrule_230526_Manage: True
+##rhel8STIG_stigrule_230526_ensure_openssh_server_x86_64_is_installed_State: installed
+##rhel8STIG_stigrule_230526_sshd_enable_Enabled: yes
 # R-230527 RHEL-08-040161
-rhel8STIG_stigrule_230527_Manage: True
-rhel8STIG_stigrule_230527_RekeyLimit_Line: RekeyLimit 1G 1h
+##rhel8STIG_stigrule_230527_Manage: True
+##rhel8STIG_stigrule_230527_RekeyLimit_Line: RekeyLimit 1G 1h
 # R-230529 RHEL-08-040170
 rhel8STIG_stigrule_230529_Manage: True
 rhel8STIG_stigrule_230529_systemctl_mask_ctrl_alt_del_target_Command: systemctl mask ctrl-alt-del.target
@@ -518,14 +518,14 @@ rhel8STIG_stigrule_244519__etc_dconf_db_local_d_01_banner_message_Value: 'true'
 rhel8STIG_stigrule_244523_Manage: True
 rhel8STIG_stigrule_244523__usr_lib_systemd_system_emergency_service_Value: '-/usr/lib/systemd/systemd-sulogin-shell emergency'
 # R-244525 RHEL-08-010201
-rhel8STIG_stigrule_244525_Manage: True
-rhel8STIG_stigrule_244525_ClientAliveInterval_Line: ClientAliveInterval 600
+##rhel8STIG_stigrule_244525_Manage: True
+##rhel8STIG_stigrule_244525_ClientAliveInterval_Line: ClientAliveInterval 600
 # R-244527 RHEL-08-010472
 rhel8STIG_stigrule_244527_Manage: True
 rhel8STIG_stigrule_244527_rng_tools_State: installed
 # R-244528 RHEL-08-010522
-rhel8STIG_stigrule_244528_Manage: True
-rhel8STIG_stigrule_244528_GSSAPIAuthentication_Line: GSSAPIAuthentication no
+##rhel8STIG_stigrule_244528_Manage: True
+##rhel8STIG_stigrule_244528_GSSAPIAuthentication_Line: GSSAPIAuthentication no
 # R-244535 RHEL-08-020031
 rhel8STIG_stigrule_244535_Manage: True
 rhel8STIG_stigrule_244535__etc_dconf_db_local_d_00_screensaver_Value: 'uint32 5'
