@@ -1188,12 +1188,6 @@
   when:
     - rhel8STIG_stigrule_230506_Manage
     - cmd_result.rc == 0
-# R-230526 RHEL-08-040160
-- name: stigrule_230526_ensure_openssh_server_x86_64_is_installed
-  yum:
-    name: openssh-server.x86_64
-    state: "{{ rhel8STIG_stigrule_230526_ensure_openssh_server_x86_64_is_installed_State }}"
-  when: rhel8STIG_stigrule_230526_Manage
 # R-230529 RHEL-08-040170
 - name: stigrule_230529_systemctl_mask_ctrl_alt_del_target
   systemd:
