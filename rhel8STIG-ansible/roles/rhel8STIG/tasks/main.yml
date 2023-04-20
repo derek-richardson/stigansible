@@ -391,16 +391,6 @@
   when:
     - rhel8STIG_stigrule_230329_Manage
     - "'gdm' in packages"
-# R-230330 RHEL-08-010830
-- name: stigrule_230330_PermitUserEnvironment
-  lineinfile:
-    path: /etc/ssh/sshd_config
-    regexp: '^\s*(?i)PermitUserEnvironment\s+'
-    line: "{{ rhel8STIG_stigrule_230330_PermitUserEnvironment_Line }}"
-  notify: ssh_restart
-  when:
-    - rhel8STIG_stigrule_230330_Manage
-    - "'openssh-server' in packages"
 # R-230346 RHEL-08-020024
 - name: stigrule_230346__etc_security_limits_conf
   lineinfile:
